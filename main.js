@@ -19,9 +19,11 @@ function loadEventListeners(){
   taskList.addEventListener('click', removeTask)
   // Clear task event 
   clearBtn.addEventListener('click', clearTasks)
+  // Filter through the task event
+  filter.addEventListener('keyup', filterTasks)
 }
 
-// Functions 
+// Add Task Function
 function addTask(e){
 
   if(taskInput.value === ''){
@@ -49,6 +51,7 @@ function addTask(e){
   e.preventDefault();
 }
 
+// Remove Task Function
 function removeTask(e) {
   // If e.target contains delete-item 
   if(e.target.parentElement.classList.contains('delete-item')) {
@@ -59,6 +62,14 @@ function removeTask(e) {
   //Prevent the default action
 }
 
+// Clear Task Function
 function clearTasks(e){
   taskList.innerHTML = '';
+}
+
+
+// Filter Task Function
+function filterTasks(e){
+  // Search value paramaters 
+  const text = e.target.value
 }
