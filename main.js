@@ -106,6 +106,7 @@ function storeTaskInLocalStorage(task) {
 function removeTask(e) {
   // If e.target contains delete-item 
   if(e.target.parentElement.classList.contains('delete-item')) {
+    // Displays a dialogue box that confirms decision on the web page
     if(confirm('Are you sure?')){
       e.target.parentElement.parentElement.remove();
     }
